@@ -113,7 +113,7 @@ public class MainProject {
         String date;
         System.out.println("Nhap ngay phat hanh: (dd/MM/yyyy) ");  date = scMain.nextLine();
         Date datePH;
-        try {
+        try { //28/08/2020
             datePH = new SimpleDateFormat("dd/MM/yyyy").parse(date);
             return new Bao(datePH, tl.getMaTaiLieu(), tl.getTenNXB(), tl.getSoban());
         } catch (ParseException ex) {
@@ -150,6 +150,7 @@ public class MainProject {
         return null;
     }
     private static void showList(ArrayList<Tailieu> listTl){
+        
         for(Tailieu tl : listTl){
             if(tl instanceof Tapchi){
                 System.out.println(((Tapchi)tl).toString());
